@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <div id="overlay">
+        <br><br>
+        <ul id="roomList">
+        </ul>
+    </div>
+
+    <header>
+        
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1>ChatNova</h1>
+        <div class="hidden"><button id="logout-button">Logout</button></div>
+    </header>
+
+    <div id="master-div">
+
+        <a href="">View Profile</a>
+        <br><br>
+
+        <button onclick="showDialog()">Join Room</button>
+    
+        <div id="hidden-input-div1">
+
+            <form id="hidden-input-div1-form">
+
+                <label>Enter Room Name</label>
+                <br>
+                <input id="hidden-input1" name="room_name" type="text" required>
+                <br>
+                <input type="submit" value="Join">
+
+            </form>
+        
+        </div>
+
+        <br><br>
+
+        <button onclick="closeDialog()">Create Room</button>
+
+        <div id="hidden-input-div2">
+
+            <form id="hidden-input-div2-form">
+                <label>Enter New Room Name</label>
+                <br>
+                <input id="hidden-input2" name="room_name" type="text" required>
+                <br><br>
+                <input type="submit" value="Create">
+            </form>    
+        </div>
+
+    </div>
+
+    <h2>Welcome <i id="userName"></i> Join a Room to start Chatting</h2>
+
+    <p id="general-para">Click on a Room to start chatting</p>
+
+    <div id="chat-container">
+        <div id="chat-messages"></div>
+        <br><br>
+        <input type="text" id="message-input" placeholder="Type a message and press enter">
+    </div>
+
+    <script src="{% static 'js/home.js' %}"></script>
+    <script src="{% static 'js/api.js' %}"></script>
+
+</body>
+</html>

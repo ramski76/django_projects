@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+header h2 {
+    text-align: center;
+}
+
+div{
+    margin-top: 10pc;
+    text-align: center;
+
+}
+
+#content a{
+    background-color: black;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+    border-radius: 20px;
+    margin: 2pc;
+}
